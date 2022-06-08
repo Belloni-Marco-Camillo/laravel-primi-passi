@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+route::get('/', function(){
+    $text = 'hello world';
+    $name = 'marco camillo belloni';
+    return view('home', compact('text','name'));
+});
+
+
+route::get('/jobs', function(){
+    $jobs = 'web designer | web developer';
+    return view('jobs', compact('jobs'));
 });
